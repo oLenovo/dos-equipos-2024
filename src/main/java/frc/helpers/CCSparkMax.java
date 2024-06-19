@@ -2,7 +2,7 @@ package frc.helpers;
 
 import com.revrobotics.RelativeEncoder;
 //import com.revrobotics.*;
-import com.revrobotics.SparkMaxPIDController;
+import com.revrobotics.SparkPIDController;
 import com.revrobotics.CANSparkMax;
 
 //Documention: https://codedocs.revrobotics.com/java/com/revrobotics/package-summary.html 
@@ -11,7 +11,7 @@ public class CCSparkMax extends CANSparkMax{
 
     private String name;
     private String shortName;
-    public  SparkMaxPIDController pidController;
+    public  SparkPIDController pidController;
     private RelativeEncoder encoder;
 
     /**

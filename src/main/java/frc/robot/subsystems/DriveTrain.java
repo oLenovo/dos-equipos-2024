@@ -22,8 +22,16 @@ public class DriveTrain extends SubsystemBase{
     // Spark frontLeft  = new Spark(Constants.MotorConstants.FRONT_LEFT);
     // Spark frontRight = new Spark(Constants.MotorConstants.FRONT_RIGHT);
     // Spark backLeft = new Spark (Constants.MotorConstants.BACK_LEFT);
-    // Spark backRight = new Spark
-    DifferentialDrive drive = new DifferentialDrive (frontLeft, frontRight);
+    // Spark backRight = new Spark (Constants.MotorConstants.BACK_RIGHT);
+    DifferentialDrive frontDifferentialDrive = new DifferentialDrive (frontLeft, frontRight);
+    DifferentialDrive backDifferentialDrive = new DifferentialDrive(backLeft, backRight);
+    public void difDrive (double moveSpeed, double turnSpeed){
+        frontDifferentialDrive.arcadeDrive(moveSpeed, turnSpeed);
+        backDifferentialDrive.arcadeDrive(moveSpeed, turnSpeed);
+    }
+    public Command drive (double moveSpeed, double turnSpeed){
+        this.run (()-> difDrive(moveSpeed, turnSpeed));
+    }
 
 
 

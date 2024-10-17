@@ -30,6 +30,7 @@ public final class Constants {
     public static final int BACK_RIGHT = 3;
     public static boolean BACK_RIGHT_REVERSE = false;
     public static final int DOOR = 4;
+    public static boolean DOOR_REVERSE = false;
     public static final int intake1 = 5;
     public static final int intake2 = 6;
     public static final int screw = 7;

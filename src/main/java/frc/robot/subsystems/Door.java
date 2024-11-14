@@ -16,4 +16,3 @@ public void openDoor() {
 public void closeDoor() {
     door.setPosition(Constants.MotorConstants.DOOR_CLOSED_POSITION);
 }
-}move

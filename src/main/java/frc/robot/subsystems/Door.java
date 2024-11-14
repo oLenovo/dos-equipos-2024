@@ -8,3 +8,12 @@ public class Door extends SubsystemBase{
     CCSparkMax door = new CCSparkMax ("door", "d", Constants.MotorConstants.DOOR, MotorType.kBrushless, IdleMode.kBrake, Constants.MotorConstants.DOOR_REVERSE);
 
 }
+
+public void openDoor() {
+    door.setPosition(Constants.MotorConstants.DOOR_OPEN_POSITION);
+}
+
+public void closeDoor() {
+    door.setPosition(Constants.MotorConstants.DOOR_CLOSED_POSITION);
+}
+}move

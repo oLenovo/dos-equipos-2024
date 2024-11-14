@@ -17,8 +17,8 @@ public class DriveTrain extends SubsystemBase{
     
     CCSparkMax frontLeft = new CCSparkMax ("front left", "fl", Constants.MotorConstants.FRONT_LEFT, MotorType.kBrushless, IdleMode.kBrake, Constants.MotorConstants.FRONT_LEFT_REVERSE);
     CCSparkMax frontRight = new CCSparkMax ("front right", "fr", Constants.MotorConstants.FRONT_RIGHT, MotorType.kBrushless, IdleMode.kBrake, Constants.MotorConstants.FRONT_RIGHT_REVERSE);
-    CCSparkMax backLeft = new CCSparkMax ("front left", "bl", Constants.MotorConstants.BACK_LEFT, MotorType.kBrushless, IdleMode.kBrake, Constants.MotorConstants.BACK_LEFT_REVERSE);
-    CCSparkMax backRight = new CCSparkMax ("front left", "br", Constants.MotorConstants.BACK_RIGHT, MotorType.kBrushless, IdleMode.kBrake, Constants.MotorConstants.BACK_RIGHT_REVERSE);
+    CCSparkMax backLeft = new CCSparkMax ("back left", "bl", Constants.MotorConstants.BACK_LEFT, MotorType.kBrushless, IdleMode.kBrake, Constants.MotorConstants.BACK_LEFT_REVERSE);
+    CCSparkMax backRight = new CCSparkMax ("back right", "br", Constants.MotorConstants.BACK_RIGHT, MotorType.kBrushless, IdleMode.kBrake, Constants.MotorConstants.BACK_RIGHT_REVERSE);
     DifferentialDrive frontDifferentialDrive = new DifferentialDrive (frontLeft, frontRight);
     DifferentialDrive backDifferentialDrive = new DifferentialDrive(backLeft, backRight);
     public void difDrive (double moveSpeed, double turnSpeed){

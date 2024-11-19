@@ -41,6 +41,7 @@ public class Door extends SubsystemBase {
         // Calculate motor power based on target position and current position
         double power = pidController.calculate(door.getPosition(), targetPosition);
         door.set(power);
+        
     }
 
     public boolean isAtTargetPosition() {

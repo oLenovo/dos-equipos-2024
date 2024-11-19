@@ -51,6 +51,14 @@ public class Door extends SubsystemBase {
         door.stopMotor();
     }
 
+    public Command open(){
+        return this.run(()-> openDoor(), this);
+    }
+
+    public Commmand close(){
+        return this.run(()-> closeDoor(), this);
+    }
+
     @Override
     public void periodic() {
         // Periodically update motor power while moving to target position
